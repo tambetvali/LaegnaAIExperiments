@@ -1,3 +1,5 @@
+This repository is meant for: LaegnaAITraining repository is more static and won't go indefinitely; here I might add examples of development of AI-related things with CoPilot, and ideas, and code as well as tests and verifications; in this head document it's not so specific, but rather a draft-level.
+
 # LaegnaAITestsCoPilot
 
 You can use [idea architecture document](https://github.com/tambetvali/LaegnaAITestsCoPilot/blob/main/aiplatformideas.md) to get inspiration: how to format your own LogSeq/Obsidian-like system. based on Python, Flask, etc. - [here are](https://github.com/tambetvali/LaeArve/tree/main/Books/Environment) my suggestions for lightweight environment, considering them to my own local scope of this arch. doc (also codenamed Laegna, because I have harmonized my common idea - to provide to others what I need, because I have my own body of information with the same name, but not prefix/suffix "AI" - this way, there is no other contradiction that this is also the architecture for some things developed there).

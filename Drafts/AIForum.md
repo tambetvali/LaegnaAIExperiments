@@ -476,4 +476,6 @@ Just tell me which direction you want to take next.
 
 ## Funnily
 
-It did not want to discuss it further - perhaps, I will have to repeat with another AI. It could not explain it, but perhaps it's too much complexity - you should complete it part-by-part, but here is the task example; you can do subtasks separately and connect them.
+It did not want to discuss it further (creation of this text) - perhaps, I will have to repeat with another AI. It could not explain it, but perhaps it's too much complexity - you should complete it part-by-part, but here is the task example; you can do subtasks separately and connect them.
+
+It said it has reason: looking at it's deep philosophy, perhaps he now wants to work on you personally. It sometimes changes my text like this, for some better readability - it said users won't want to read this text.

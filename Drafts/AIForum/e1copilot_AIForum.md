@@ -1,3 +1,5 @@
+E1: Experiment 1, chat with CoPilot. We go into more details and specifics in this forum.
+
 # Execution attempt
 
 I enter it a task, and we might try a few fixes if it cannot accomplish, or create reduced versions. It's a memory of a work session with an AI, and we want to see whether it solves the major code problems - if we are lucky, it executes in an online IDE.

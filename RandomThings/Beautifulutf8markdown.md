@@ -571,22 +571,6 @@ Expanding star:
 ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿
 ```
 
-## Animation Set
-Braille spinner:
-```
-⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏
-```
-
-Smooth bar:
-```
-▁ ▂ ▃ ▄ ▅ ▆ ▇ █
-```
-
-Expanding star:
-```
-✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿
-```
-
 # ASCII, UTF‑8, and Why Text‑First Expression Still Matters
 
 ## 1. Why expressive people — hackers, writers, builders — love ASCII

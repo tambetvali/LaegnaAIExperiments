@@ -82,7 +82,7 @@ From there:
 
 - New Q&As can be created as **replies**  
 - Each reply can inherit or modify the extension set  
-- Some aspects can be reset (e.g., removing certain extensions or ignoring certain Q&As)  
+- Some aspects can be reset (e.g., removing certain extensions or ignoring certain Q&As in relation to parent/seed Q&A which is being answered)  
 - Advanced context management is possible later, but not described in detail yet  
 
 ---

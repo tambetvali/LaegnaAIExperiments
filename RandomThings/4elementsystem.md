@@ -7,19 +7,19 @@ The elements system, in Hinduism, was seen as *mental elements* - while binary o
 # 3 paradigms of an AI
 
 We can roughly separate AI systems into 3 paradigms or methods:
-1. Machine Learning: adaptive logic based systems, which optimize and use equations.
+1. **Machine Learning**: adaptive logic based systems, which optimize and use equations.
    - Most normally, input is in form of a table, such as columns A, B, C; this is accompanied by an equation, which has two sides and uses A, B and C as unknowns in question or answer.
    - Machine Learning is where humans are interested rather in *inside* of the AI, than the result it gave on it's own, and it's thus a *pragmatic* system.
    - It's AI-like capability comes that while this is a very simple thing, and thus might not look intellectual, but we humans actually do use these simple systems in name of our mind: mostly, when we get some basic data, we won't do any heavy magic, but we try to find simple patterns exactly like that, *and it's the best of our human intellect*.
    - I interpret imperative paradigms, where things are executed sequentially, as close brother to here: we use sequential equations and train the unknowns on machine learning models, and the syntax of Machine Learning and some kind of organized, run-in-order program code can be most easily assigned.
    - These models have near-linear complexity in many practical applications, but the benefit is also often linear: we do not enter into particularly new structures, as in accelerated gravity towards better solution.
      - In each paradigm, we can work around pitfalls to best utilize their strengths; for example we can use creative methods to generate test equations, resolve them with a model, and choose the best equation or equation set.
-2. Neural Networks, Deep Learning, Field-based systems:
+2. **Neural Networks**, Deep Learning, Field-based systems:
    - Those systems mostly have adaptive fields of similar data structures, further divided into layers, groups, etc.
    - In these systems, no wizardly of humans happens with data directly, but the interaction is based on *answers of ready-made AI itself*, rather than clarity of things that happen inside, as in Machine Learning.
    - These models have near-exponential complexity and are very slow as they approach larger scales in linear manner:
      - The results, indeed, are also more creative and exponential.
-3. Logical reasoning
+3. **Logical reasoning**
    - Logic provers and logic systems are somewhat similar and sometimes, we might look them inside the same category. One is rather deciding about metatruth (theorem solvers), while the other one resolves particular combinations (logical system): but in edge cases, we can feed similar information and get equivalent results.
    - Logic systems
      - These systems get theorems and data from you, resolve this into fundamental representation, and ask your questions which have similar form or implied form from the original data and data connections.

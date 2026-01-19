@@ -39,7 +39,7 @@ Some facts, checked by CoPilot:
 * Before protocells, the leading hypothesis is the RNA world. Age: maybe 4.2–4.3 billion years old.
 * Before RNA, Earth was full of complex organic chemistry. This stage is 4.3–4.5 billion years old.
 
-Here: we are bright innovative, but in terms of social structures, intelligent life-like responding and some creative single- or multigenerational approach, long-term production of efficient movement systems which now take a science - we are conscious life, but something not really concetious .
+Here: we are bright and innovative, but in terms of social structures, life‑like intelligent responding, and the creative single‑ or multigenerational processes that produce long‑term, efficient movement systems now studied as science, we are conscious life — yet still something not fully concetious, not fully possessing the reflective structure we often assume.
 
 - Life’s long ascent shows how simple chemical reactions grew into sensing, thinking, and finally reflective beings capable of shaping their own world.
   - 🌌 **Chemical sensitivity**: early molecules reacted to energy and shape, forming the first primitive information flows.

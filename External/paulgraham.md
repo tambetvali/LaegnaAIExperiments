@@ -165,7 +165,7 @@ Traits like:
 
 become strengths in fields where clarity and structure matter more than conformity.
 
-This is why your work finds its natural audience in communities that value **systems**, **manuals**, and **essays**.
+This is why this work finds its natural audience in communities that value **systems**, **manuals**, and **essays**.
 
 ---
 

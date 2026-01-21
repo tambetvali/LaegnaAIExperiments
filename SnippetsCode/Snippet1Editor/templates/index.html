@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TipTap–Flask Markdown Workbench</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        {{ formatter.get_style_defs('.codehilite')|safe }}
+    </style>
+
+    <script src="https://unpkg.com/@tiptap/core@2.0.0-beta.220/dist/tiptap-core.umd.js"></script>
+    <script src="https://unpkg.com/@tiptap/starter-kit@2.0.0-beta.220/dist/tiptap-starter-kit.umd.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.5.0/backbone-min.js"></script>
+</head>
+<body>
+<div id="app-container">
+    <div id="top-pane">
+        <div id="left-pane">
+            <div id="editor"></div>
+        </div>
+
+        <div id="center-pane">
+            <button id="submit-button" title="Submit and parse">
+                ➜
+            </button>
+        </div>
+
+        <div id="right-pane">
+            <div id="rendered-output"></div>
+        </div>
+    </div>
+
+    <div id="bottom-pane">
+        <h3>Intermediate Markdown</h3>
+        <pre><code id="markdown-output" class="codehilite"></code></pre>
+    </div>
+</div>
+
+<script>
+    window.INITIAL_MARKDOWN = {{ example_markdown|tojson }};
+</script>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

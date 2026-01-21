@@ -1,3 +1,7 @@
+For installation manual, open [TUTORIAL.md](TUTORIAL.md). This is free code, which will create you markdown-aware WYSIWYG editor, which still runs on HTML itself: it will convert the result to Markdown *after* you edit it, on server side.
+- **Notice**: this is initial version and we have to get through parsing all tags, because code blocks are not yet parsed; headers, bold, italic - general formatting already works.
+- It's Creative Commons free code for everybody; sensibly, I can easily give more rights for my code if you lack ones.
+
 # AI API — TipTap–Flask Markdown Workbench
 
 This AI API defines the behaviour and structure of a **TipTap‑based WYSIWYG Markdown editor** embedded in a **Python Flask** application, using **Mistune** for Markdown parsing, **Pygments** for syntax highlighting, and **Backbone.js** for client‑side real‑time behaviour. The system follows a **model–view–controller (MVC)** paradigm and is designed so that the **API + Spec alone are sufficient for an AI to recreate or update the implementation**.

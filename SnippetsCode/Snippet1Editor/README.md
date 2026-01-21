@@ -1,5 +1,6 @@
 For installation manual, open [TUTORIAL.md](TUTORIAL.md). This is free code, which will create you markdown-aware WYSIWYG editor, which still runs on HTML itself: it will convert the result to Markdown *after* you edit it, on server side.
 - Notice: this is initial version and we have to get through parsing all tags, because code blocks are not yet parsed; headers, bold, italic - general formatting already works.
+- It's Creative Commons free code for everybody; sensibly, I can easily give more rights for my code if you lack ones.
 
 # AI API — TipTap–Flask Markdown Workbench
 

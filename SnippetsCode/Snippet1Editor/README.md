@@ -63,6 +63,127 @@ The AI must implement and maintain the following API surface and behaviours.
 
 ---
 
+# 0. Getting Started With ChatGPT or Copilot
+
+This project is intentionally small, transparent, and AI‑friendly.  
+Whether you use a lightweight 3B model or a large model, the assistant can fully understand the codebase and help you extend it.  
+You only need to give it the right starting context.
+
+There are three simple ways to begin.
+
+---
+
+## A. Start by giving the AI the full STRUCTURE.md (recommended)
+
+STRUCTURE.md contains the complete, working implementation of Snippet1Editor.  
+It is short enough to copy in full and gives the AI everything it needs to understand:
+
+- the architecture  
+- the file layout  
+- the Flask entry point  
+- the WYSIWYG → Markdown flow  
+- how input and output move through the system  
+
+How to begin:
+
+1. Open STRUCTURE.md in GitHub.  
+2. Copy the entire file.  
+3. Paste it into ChatGPT or Copilot.  
+4. Add a message such as:
+
+```
+This is the full STRUCTURE.md of the Snippet1Editor project.  
+Please read it and confirm you understand the architecture.  
+We will continue working on this project together.
+```
+
+This gives the AI a complete mental model before you start modifying anything.
+
+---
+
+## B. Start from the task description in README.md (or your modified version)
+
+If you prefer a guided introduction—setup, environment preparation, or conceptual overview—start with the high‑level description.
+
+1. Copy the relevant part of README.md.  
+2. Paste it into ChatGPT or Copilot.  
+3. Add:
+
+```
+Use this description as the starting point.  
+Help me follow the process described in TUTORIAL.md and set up the environment.
+```
+
+This mirrors the workflow shown in TUTORIAL.md, including the debugging and fixing steps in its second half.
+
+---
+
+## C. Start with the three tasks in TODO.md (jump straight into coding)
+
+If you want to begin by implementing features, use the three initial tasks:
+
+- HTML → Markdown processing for custom tags  
+- Improving the WYSIWYG editor styling  
+- Adding formatting buttons  
+
+How to begin:
+
+1. Open TODO.md.  
+2. Copy the three tasks.  
+3. Paste them into ChatGPT or Copilot with:
+
+```
+These are the first three tasks from TODO.md.  
+Let’s pick one and start implementing it.  
+Use STRUCTURE.md as the reference implementation.
+```
+
+This is the fastest way to start building.
+
+---
+
+## D. Ask the AI to add inference or customization
+
+Once the AI understands the project (via A, B, or C), you can ask it to:
+
+- add AI inference (Ollama, OpenAI, Copilot API, etc.)  
+- turn the editor into a translator  
+- turn it into a conversational interface  
+- change the theme or layout  
+- modify the WYSIWYG editor  
+- add new modes or tools  
+
+For example:
+
+```
+Now that you understand the project, help me add AI inference so the editor can act as a translator or conversational assistant.
+```
+
+Or:
+
+```
+Help me customize the design and improve the WYSIWYG editor.
+```
+
+The AI can generate new code, explain changes, and help you debug—just like the workflow demonstrated in TUTORIAL.md.
+
+---
+
+## E. What to do next
+
+Once the AI is introduced to the project, you can ask it to:
+
+- explain the architecture  
+- implement one of the TODO tasks  
+- add AI inference  
+- customize the UI  
+- debug errors  
+- extend the project in any direction  
+
+The project is intentionally linear and approachable, so both beginners and experienced developers can work comfortably with it.
+
+---
+
 ## AI API — 3B Model
 
 This subsection defines a **simplified but fully functional** version of the system, suitable for a ~3B parameter model. The focus is on **clarity, minimal dependencies, and straightforward logic**, while still respecting the overall architecture.

@@ -1,6 +1,48 @@
+# Project/snippet introduction
+
 For installation manual, open [TUTORIAL.md](TUTORIAL.md). This is free code, which will create you markdown-aware WYSIWYG editor, which still runs on HTML itself: it will convert the result to Markdown *after* you edit it, on server side.
-- **Notice**: this is initial version and we have to get through parsing all tags, because code blocks are not yet parsed; headers, bold, italic - general formatting already works.
+- **Notice**: this is initial version and [we have to get through](TODO.md) parsing all tags, because code blocks are not yet parsed; headers, bold, italic - general formatting already works.
 - It's Creative Commons free code for everybody; sensibly, I can easily give more rights for my code if you lack ones.
+
+## 📚 Key Project Documentation
+
+The Snippet1Editor includes three central documents that define how the project is structured, how to work with it, and what remains to be done. These are the primary entry points for anyone exploring or extending the system.
+
+### 🔹 [STRUCTURE.md](STRUCTURE.md)
+A high‑level architectural overview of the project.  
+It explains:
+
+- The folder layout and how components relate to each other  
+- How the frontend, backend, and build pipeline interact  
+- Where core logic lives and how data flows through the editor  
+- How to extend or reorganize parts of the system safely  
+
+Use this file when you want to understand *how everything fits together*.
+
+---
+
+### 🔹 [TODO.md](TODO.md)
+A living development roadmap containing:
+
+- Planned improvements  
+- Known issues and technical debt  
+- Refactoring targets  
+- Feature ideas and experimental directions  
+
+Check this file before contributing or planning new work.
+
+---
+
+### 🔹 [TUTORIAL.md](TUTORIAL.md)
+A practical, step‑by‑step guide for using and modifying the Snippet1Editor.  
+It covers:
+
+- How to run the project  
+- How the editor behaves in practice  
+- How Markdown → HTML → highlighted Markdown flow works  
+- Example workflows and usage tips  
+
+This is the best starting point for new users who want to *learn by doing*.
 
 # AI API — TipTap–Flask Markdown Workbench
 

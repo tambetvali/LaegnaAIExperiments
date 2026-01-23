@@ -262,7 +262,7 @@ You learned:
 
 This is a practical first step toward more advanced interactive conversational systems — systems where the AI not only answers questions but *shapes the interface itself*, creating a new kind of human–computer collaboration.
 
-# Chapter — A Multi‑Pane, AI‑Driven Interactive Document Interface
+# Chapter 2 — A Multi‑Pane, AI‑Driven Interactive Document Interface
 
 ## Overview
 
@@ -454,7 +454,7 @@ By using a three‑level chapter structure, dynamic update areas, and AI‑gener
 
 The AI can highlight, scroll, update, or expand content; add new sections; or rewrite specific parts — all while maintaining a stable structure through summaries and named areas. This creates a powerful synergy between natural language and interactive UI, enabling applications far beyond traditional chat systems.
 
-# Ideas for simple implementation based on [LaegnaAIExperiments/SnippetsCode/Snippet1Editor](https://github.com/tambetvali/LaegnaAIExperiments/tree/main/SnippetsCode/Snippet1Editor)
+# Chapter 3 — ideas for simple implementation based on [LaegnaAIExperiments/SnippetsCode/Snippet1Editor](https://github.com/tambetvali/LaegnaAIExperiments/tree/main/SnippetsCode/Snippet1Editor)
 
 ## 1. Ollama connector recap (what it does)
 

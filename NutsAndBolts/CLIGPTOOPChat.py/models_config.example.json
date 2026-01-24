@@ -1,0 +1,28 @@
+{
+    "models": [
+        {
+            "localname": "Run with Ollama",
+            "provider": "ollama",
+            "internalprovider": "ollama",
+            "model": "llama3.2:1b",
+            "host": "http://localhost:11434",
+            "stream": true
+        },
+        {
+            "localname": "Run with Litellm",
+            "provider": "ollama",
+            "internalprovider": "litellm",
+            "model": "llama3.2:1b",
+            "host": "http://localhost:11434",
+            "stream": true
+        },
+        {
+            "localname": "Run with Anthropic Claude",
+            "provider": "anthropic",
+            "internalprovider": "claude",
+            "model": "claude_v1",
+            "host": "https://api.anthropic.com/v1/chat/completions",
+            "stream": true
+        }
+    ]
+}

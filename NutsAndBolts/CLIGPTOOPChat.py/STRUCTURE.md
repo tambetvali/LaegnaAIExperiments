@@ -52,16 +52,16 @@ Workflow:
 Generated/user-created files are marked with **add:** and a **←** marker.
 
 ```text
-project-root/
+project-root/                     ← LaegnaAIExperiments/NutsAndBolts/CLIGPTOOPChat.py/
 │
 ├── chat.py
 ├── models_config.example.json
-├── models_config.json        ← add:generated or user-created
+├── models_config.json            ← add:/ generated or user-created
 ├── modelselector.py
 ├── ollamaautomodelsjsonconf.py
-├── model_select.json         ← add:created by modelselector.py
-├── ollama_models.json        ← add:created for Ollama model listing
-├── ollama_models_gen.json    ← add:created by ollamaautomodelsjsonconf.py
+├── model_select.json             ← add:/ created by modelselector.py
+├── ollama_models.json            ← add:/ created for Ollama model listing
+├── ollama_models_gen.json        ← add:/ created by ollamaautomodelsjsonconf.py
 │
 └── Services/
     ├── service.py

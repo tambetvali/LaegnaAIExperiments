@@ -49,7 +49,7 @@ Workflow:
 
 ## 3. Folder Structure
 
-Generated files are marked with **add:** and a **←** marker.
+Generated/user-created files are marked with **add:** and a **←** marker.
 
 ```text
 project-root/

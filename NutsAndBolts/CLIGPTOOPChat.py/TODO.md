@@ -44,7 +44,11 @@ start a new conversation and ask who was the first president of America: and hop
 This is rather a textbook, and while I want to implement many things in code, it tends to leave you some homework: until *anybody* has solved this well enough, in small
 piece of code to study the common things between us.
 
-## Anytree connection
+## First item
+
+Register Q&A card tree as data structure, follow Pythonic understanding of it's semantics.
+
+### Anytree connection
 
 ***Anytree*** is a small python library, which lets you:
 - First and foremost: [Do this](https://anytree.readthedocs.io/en/latest/)
@@ -64,7 +68,7 @@ it's inheritance and function: each time you create a member and associate it's 
 and also you make it know who is the Node of your parent, which is the creaded node's parent. Instantly, you have access to Anytree's powerful
 branching, node structure with optimized query interface similar to XML search, yet simple. Just ask AI and don't read the funcing manual.
 
-## MongoDB connection
+### MongoDB connection (optional)
 
 ***MongoDB*** is database, which gets heavily integrated into **Python** and *it's objects*.
 - It supports **Pythonic** class structure, which gets associated with rows of class-like definitions rather in Python;

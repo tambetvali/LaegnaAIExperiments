@@ -71,6 +71,15 @@ project-root/
     └── litgpt_streamer.py
 ```
 
+***Notice***: `ollama_models.json` should contain the host in a dictionary, such as "`{ "host": "http://localhost:11434" }`" for typical Ollama instance.
+This enables Ollama to connect to it's server and get the model listing for your convinience; using multiple lines, the file content is:
+
+```json
+{
+  "host": "http://localhost:11434"
+}
+```
+
 ---
 
 ## 4. Installation & Driver Setup

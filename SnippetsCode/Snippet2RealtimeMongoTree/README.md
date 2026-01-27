@@ -1987,3 +1987,298 @@ Administrators now have a **pure LitGPT pipeline**:
 - Reinforce the translation engine  
 
 This chapter completes the **data → model → improved data** cycle using **LitGPT only**.
+
+# LitGPT ↔ Ollama Integration Reference  
+## Serving, Streaming, Compatibility, and GGUF Conversion
+
+This document is a **reference-style guide** for integrating **LitGPT** into an existing system (such as *Snippet2MongoExplorer1Anytree*) that already assumes an **Ollama-like streaming interface**.
+
+The goal is to support **multiple interchangeable backends** without rewriting your application logic.
+
+---
+
+## 0. Core Rule (Architecture Invariant)
+
+> **The system must not care who generates tokens.**
+
+Your application only assumes:
+- A request can be sent
+- Chunks may arrive incrementally (streaming)
+- A final immutable answer exists
+- Failed answers can be recalled
+
+Everything plugs in at the **LLM client boundary**.
+
+---
+
+## 1. Three Backends, One Interface
+
+| Backend | Streaming | Purpose |
+|------|---------|--------|
+| LitGPT simple driver | ❌ (fake / buffered) | Small models, offline, minimal |
+| LitGPT streaming server | ✅ | Full streaming parity |
+| Ollama (GGUF) | ✅ | Production serving & reuse |
+
+All three must implement:
+
+```python
+for chunk in llm_client.stream_answer(question):
+    ...
+```
+
+---
+
+## 2. LitGPT as a Backend
+
+LitGPT gives you **model control**, not a server.  
+You decide how it is exposed.
+
+---
+
+## 2.1 Minimal LitGPT Driver (no true streaming)
+
+**Use when:**
+- Model ≤ ~1–3B
+- CPU or slow GPU
+- Streaming is optional
+
+### Driver
+
+```python
+# litgpt_driver.py
+from litgpt import GPT
+from litgpt.utils import load_checkpoint
+
+class LitGPTDriver:
+    def __init__(self, checkpoint_dir):
+        self.model = GPT.from_name("tinyllama")
+        load_checkpoint(self.model, checkpoint_dir)
+        self.model.eval()
+
+    def generate(self, prompt, max_tokens=256):
+        return self.model.generate(
+            prompt,
+            max_new_tokens=max_tokens,
+            temperature=0.7
+        )
+```
+
+### Adapter for your system
+
+```python
+class LitGPTClient:
+    def __init__(self, driver):
+        self.driver = driver
+
+    def stream_answer(self, question):
+        text = self.driver.generate(question)
+        # Fake streaming
+        for i in range(0, len(text), 40):
+            yield text[i:i+40]
+```
+
+**Limitation:**  
+This only *simulates* streaming.  
+Your immutability-after-finish logic still works correctly.
+
+---
+
+## 2.2 Full LitGPT Streaming Server (recommended)
+
+This provides **real token-level streaming**.
+
+### Architecture
+
+```mermaid
+flowchart LR
+    Client --> FastAPI
+    FastAPI --> LitGPT
+    LitGPT -->|tokens| FastAPI
+    FastAPI -->|stream| Client
+```
+
+### Minimal Streaming Server (FastAPI)
+
+```python
+# litgpt_server.py
+from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
+from litgpt import GPT
+from litgpt.utils import load_checkpoint
+
+app = FastAPI()
+
+model = GPT.from_name("llama")
+load_checkpoint(model, "checkpoints/my_model")
+model.eval()
+
+@app.post("/v1/chat/completions")
+def chat(req: dict):
+    prompt = req["messages"][-1]["content"]
+
+    def token_stream():
+        for token in model.generate(
+            prompt,
+            max_new_tokens=512,
+            temperature=0.7,
+            stream=True
+        ):
+            yield token
+
+    return StreamingResponse(
+        token_stream(),
+        media_type="text/plain"
+    )
+```
+
+---
+
+## 3. Emulating Ollama Compatibility
+
+Your system already assumes **Ollama semantics**.  
+Do **not** change `AIService`.  
+Replace the client.
+
+---
+
+## 3.1 Ollama-Compatible LitGPT Client
+
+```python
+import requests
+
+class OllamaCompatibleLitGPTClient:
+    def __init__(self, base_url="http://localhost:8000"):
+        self.base_url = base_url
+
+    def stream_answer(self, question):
+        payload = {
+            "model": "litgpt",
+            "messages": [{"role": "user", "content": question}],
+            "stream": True
+        }
+
+        with requests.post(
+            f"{self.base_url}/v1/chat/completions",
+            json=payload,
+            stream=True
+        ) as r:
+            for line in r.iter_lines():
+                if line:
+                    yield line.decode("utf-8")
+```
+
+**Result:**
+- Flask + SSE unchanged
+- MongoDB streaming unchanged
+- Recall unchanged
+- Anytree unaffected
+
+You have **replaced Ollama without touching your app**.
+
+---
+
+## 4. LitGPT → GGUF → Ollama (Same Model, Zero Code Changes)
+
+This is the **cleanest long-term path**.
+
+### Why this matters
+
+- Train / finetune in LitGPT (PyTorch, LoRA, math-friendly)
+- Convert once
+- Serve everywhere with Ollama
+- Application sees no difference
+
+---
+
+## 4.1 Convert LitGPT Checkpoint → GGUF
+
+### Export to HF-style weights
+
+```bash
+litgpt export \
+  --checkpoint checkpoints/my_model \
+  --output hf_model
+```
+
+### Convert to GGUF (llama.cpp)
+
+```bash
+python convert-hf-to-gguf.py \
+  hf_model \
+  --outfile my_model.gguf
+```
+
+---
+
+## 4.2 Serve with Ollama
+
+```bash
+ollama create my-litgpt-model -f Modelfile
+```
+
+**Modelfile**
+
+```
+FROM ./my_model.gguf
+PARAMETER temperature 0.7
+PARAMETER stop "</s>"
+```
+
+Run:
+
+```bash
+ollama run my-litgpt-model
+```
+
+Your application:
+- Keeps `/stream/<node>`
+- Keeps SSE
+- Keeps MongoDB immutability
+- Keeps recall logic
+
+---
+
+## 5. Recommended Usage Phases
+
+### Phase 1 — Development
+- LitGPT driver
+- Fake streaming
+- Offline, debuggable
+
+### Phase 2 — Architecture Validation
+- LitGPT streaming server
+- Ollama-compatible API
+- Full parity with AIService
+
+### Phase 3 — Distribution / Reuse
+- Convert to GGUF
+- Serve with Ollama
+- Zero application changes
+
+---
+
+## 6. Final Architecture Diagram
+
+```mermaid
+flowchart LR
+    UI --> Flask
+    Flask --> AIService
+    AIService --> LLMClient
+
+    LLMClient -->|A| LitGPT_Driver
+    LLMClient -->|B| LitGPT_Server
+    LLMClient -->|C| Ollama_GGUF
+
+    LitGPT_Server -.emulates.-> Ollama_API
+    Ollama_GGUF --> Ollama_API
+```
+
+---
+
+## Final Takeaway
+
+> **LitGPT is your training brain.**  
+> **Ollama is your serving shell.**  
+> **MongoDB + Anytree is the mind.**
+
+Keep those layers separate, and the system scales *conceptually*, not just technically.

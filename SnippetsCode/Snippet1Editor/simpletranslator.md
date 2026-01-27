@@ -1363,7 +1363,7 @@ each translation becomes a structured memory item, and the system can later use 
 When an AI translation card becomes **immutable**, we now:
 
 1. Generate an **Anki card** with:
-   - **Question:** `translate this to spanish`
+   - **Question:** `translate this to spanish: <therealquestion>`
    - **Answer:** `this, in spanish, is: <therealanswer>`
 2. Append it to an Anki deck file (`anki_deck.jsonl`)
 3. Restart a small Flask service that streams the deck as JSONL lines
@@ -1388,7 +1388,7 @@ def create_anki_card(card):
     """
     Convert a finalized translation card into an Anki-style JSONL entry.
     """
-    question = "translate this to spanish"
+    question = "translate this to spanish: {card['question']"
     answer = f"this, in spanish, is: {card['answer']}"
 
     return {

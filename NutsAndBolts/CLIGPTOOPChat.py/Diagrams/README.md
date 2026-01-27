@@ -1,6 +1,8 @@
 # 🌟 Grand Chapter I: Introduction  
 ## Overview of the Q&A Tree System and GPT Parallel
 
+-> Please, open the [README.md]() directly to avoid rendering problems, it's the same file shown here!
+
 This chapter introduces the **core concepts**:
 
 - We structure **Q&A as instances** with `Q` and `A`.  

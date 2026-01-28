@@ -2588,9 +2588,9 @@ This is the kind of foundation behind:
 
 ---
 
-# 6. Corrected Mermaid diagrams (fully valid)
+# 6. Mermaid diagrams
 
-## 6.1 Dual‑box architecture (fixed)
+# 6.1 Dual‑box architecture
 
 ```mermaid
 flowchart LR
@@ -2611,7 +2611,7 @@ flowchart LR
     BB --> ABox
 ```
 
-## 6.2 Full system flow (fixed)
+## 6.2 Full system flow
 
 ```mermaid
 flowchart TD

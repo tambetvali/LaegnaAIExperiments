@@ -2,6 +2,10 @@
 
 *An extroverted versioning system*. You do not have your own versions, but you collaborate on global, timestamp-based versioning.
 
+You can use also the name "DragonYear versioning": this, because I try to make sure, along other things chinese year animals are encoded visibly. It's very important that different people get *some* insight into the context of versions, and rather a few animals than personal alignment for each of 100 years in century are used - I use quite random systems where *time* is given some names, classes of days.
+
+I will drink coffee and do my morning ritual, then continue: it's not good to write the *whole* article without those rituals. Well, the classical coffee+cigaretter ritual, this one works like magic and is scientifically verified brain-booster (brain is your sense-activity engine, so magic shift into brighter world should follow each time, so fast that it almost after..).
+
 Extraversion is best used for:
 - **Data autoincrement id**: Versioning trees, which grow from root to branches.
 - **Versioning / update id**: Versioning mutations, developments and updates in the same data tag.

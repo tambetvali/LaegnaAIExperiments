@@ -62,3 +62,36 @@ I am a hacker in this sense to break all the policies and get something out of r
   - I am not very interested in comfort levels of typical american - I am sure you can watch good online TV, but typically I fail if I cannot do this with my own computer and especially, I do not trust people who
     show me certain "comfort level" of not adding any support of non-american life style - for example, a single phone card outdated of mine, and I did not have access to several old accounts; the google system
     ensured efficient hacker protection, but it turned out I am rather a hacker without permanent phone card - I stopped favouring google products, because *nothing really happened with this failure*.
+
+# Our strategy
+
+Installation time failures all go with serious suspection: more often than not, installation time failure means growing network of runtime and user failures.
+
+We do not think offline software needs to:
+- Have only online manual or any complexity of building manuals
+- Need online account to be logged in
+
+We do not think we are Americans:
+- if you don't have a car, your brother would build you one.
+- phones and lifetime phone cards are free
+  - and homeless collects them from garbage
+- lacking a credit card is serious life failure
+  - you are non-human, unethical mystery being and measures are taken
+
+We rather think:
+- We want to run 20 libraries and install them in a set of commands, after gaining some experience.
+- We keep our computers capable on our own, not collecting badges for offline work.
+- Finally:
+  - It should go as documentation tells us
+  - We install our drivers and toolkits automatically for client
+  - They do not need to create additional, hard to reason accounts or gather API keys;
+    - rather, for example, if they demand you an account, this happens because they are providing a service;
+      not because you are.
+
+And the last rule: occasionally, we break each rule and *still like the software*:
+- For example, what I do is open source - lovable.dev, for example, is none of open source, but as our qualified online engine
+  it *does* provide enough free credits to get a little org going or a freelancer create their basic website or programmer
+  having nice design for some docs;
+  - definitely the AI model runs for heavy cost and the "freedom" is clever state of mind they provide for us,
+    rather than simple principle of "not asking money" - I am supporter of freedom, but not against money; it's the
+    common sense.

@@ -4,6 +4,30 @@
 
 Finding correct, working AI models has been work; the tools, libraries and models mentioned here: in many cases, selecting a few from general class of tools or opportunities has been part-time work of 2-4 weeks, with several disappointments and finding strategies out of limitations; for this, I think it's important to bring a small list of AI models, which at least work.
 
+# No.1 spiritual-intelligent model
+
+This is the one for common bla-bla: and not just for code or science or math.
+
+Gemma3:4B as installed on Ollama just won my heart in this:
+- Is not meant to compete with CodeLlama or qwen coder in coding task or being your development assistant.
+- Welcomes warmly, responds to instructions and likes to chat.
+  - Has funny way to be "intelligent" in general, human sense, good sense of "humor" etc.
+
+To balance between:
+- Hardware: it runs fast with my 16GB mem, 4 2GHz core intel - not very powerful to run advanced or intermediate AI; 4B model is the most powerful "small" or "basic" model.
+- Generational needs and efficiency.
+
+I want to program some things, which enrichen my content and make it more interactive, such as real-time response, and to test the code written for such purposes:
+- gemma3:4B is good model; comparing to gemma3:2B, which is good in it's own size, but not in general sense to tell you something fun or interesting.
+- x/flux2-klein:latest might be an image generation model for ollama.
+
+Now this seems so:
+- To fully configure one model and put the configuration instructions here, I probably are going to use gemma3:4B.
+  - I do not want to show you configurations, which met my special needs.
+  - I do feel that this one will meet the general needs, allow me to create one model driver which works for many people.
+
+So keep your thumbs..
+
 # CodeLlama
 
 You can get them to work on Ollama, which is a well-supported server, and there are various plugins and tools they can cooperate with. I got them downloaded and installed; on VSCode extension, they were extemely slow and broke on it's new version on my 15GB memory laptop: altough, directly inside codellama they are relatively fast on the same computer.

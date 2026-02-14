@@ -19,7 +19,8 @@ To balance between:
 
 I want to program some things, which enrichen my content and make it more interactive, such as real-time response, and to test the code written for such purposes:
 - gemma3:4B is good model; comparing to gemma3:2B, which is good in it's own size, but not in general sense to tell you something fun or interesting.
-- x/flux2-klein:latest might be an image generation model for ollama.
+- x/flux2-klein:latest might be an image generation model for ollama (10 minutes later - well works only on Apple, confirmed; let's go on with ONNX unless you have apple, in which case
+  you might go on with our standard libraries we later definitely include - as soon as Ollama runs flux2 or image generation models on linux, I will write a manual shortly).
 
 Now this seems so:
 - To fully configure one model and put the configuration instructions here, I probably are going to use gemma3:4B.

@@ -30,7 +30,7 @@ This is a typical low-level OS function, which should have drivers, use cases, c
 
 I would give you long list of issues:
 - With box where you write questions.
-- Formats you get answers in, such as "```" starts the article block is only way to copy-pase, but inside the next "```" just breaks it.
+- Formats you get answers in, such as "\`\`\`" starts the article block is only way to copy-pase, but inside the next "\`\`\`" just breaks it.
 - AI's consciousness of it's environments.
 
 This is:

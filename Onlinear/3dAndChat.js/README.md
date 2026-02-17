@@ -37,6 +37,7 @@ The sections that follow explain how the pieces fit together — the 3D interfac
 # Hello!
 
 [Chat with WebLLM](https://webllm.mlc.ai/?utm_source=copilot.com) - here, find a nice web-based chat client.
+[Test 3D with Babylon.js](https://spireason.neocities.org/Playground/3dtest) - see how a simple design fits Laegna.
 
 # 🌌 Building the Laegna × Spireason Platform  
 *A development story in three parts: 3D interface, WebLLM integration, and Python parallelization*

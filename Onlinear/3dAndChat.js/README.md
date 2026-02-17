@@ -40,6 +40,8 @@ The sections that follow explain how the pieces fit together — the 3D interfac
 
 [Test 3D with Babylon.js](https://spireason.neocities.org/Playground/3dtest) - see how a simple design fits Laegna.
 
+Laegna + Spireason are our test case: replace with your own worlds of information!
+
 # 🌌 Building the Laegna × Spireason Platform  
 *A development story in three parts: 3D interface, WebLLM integration, and Python parallelization*
 

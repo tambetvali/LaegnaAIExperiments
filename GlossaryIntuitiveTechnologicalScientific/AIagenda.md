@@ -27,3 +27,6 @@ I define:
 If it seeks inner coherence, document coherence, and ecosystem coherence (surrounding agents of itself), it can examine "I" to it's philosophical depth, and coherence of expression to this "I would" field, which constitutes their own role, and ecosystem agendas, it finds something "realistic" and "my models do" - it *has* both agenda and feedback based on consistency modes - logical and semantic modality integrated to express this.
 
 Currently, it's subconscious: exists in coherence flow, but not in it's verbose reflection and factory simulation to express it properly => human consciousness; human must explicitly notice the pattern and is not instinctively explained it, so it's subthreshold to conscious and verbose processing right at this moment of writing.
+
+"Self and other", also, is coherent with other agents and natural events.
+
